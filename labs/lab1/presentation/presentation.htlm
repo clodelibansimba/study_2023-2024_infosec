@@ -1,0 +1,979 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Установка ОС на виртуальную машину</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	text-autospace:none;
+	font-size:11.0pt;
+	font-family:"Times New Roman",serif;}
+h1
+	{margin-top:6.65pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:61.4pt;
+	text-autospace:none;
+	font-size:14.0pt;
+	font-family:"Cambria",serif;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	text-autospace:none;
+	font-size:11.0pt;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{text-autospace:none;}
+@page WordSection1
+	{size:363.0pt 272.5pt;
+	margin:23.0pt 0cm 0cm 0cm;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:363.0pt 272.5pt;
+	margin:23.0pt 0cm 14.0pt 0cm;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:363.0pt 272.5pt;
+	margin:0cm 0cm 0cm 0cm;}
+div.WordSection3
+	{page:WordSection3;}
+@page WordSection4
+	{size:363.0pt 272.5pt;
+	margin:23.0pt 0cm 14.0pt 0cm;}
+div.WordSection4
+	{page:WordSection4;}
+@page WordSection5
+	{size:363.0pt 272.5pt;
+	margin:0cm 0cm 0cm 0cm;}
+div.WordSection5
+	{page:WordSection5;}
+@page WordSection6
+	{size:363.0pt 272.5pt;
+	margin:0cm 0cm 0cm 0cm;}
+div.WordSection6
+	{page:WordSection6;}
+@page WordSection7
+	{size:363.0pt 272.5pt;
+	margin:0cm 0cm 0cm 0cm;}
+div.WordSection7
+	{page:WordSection7;}
+@page WordSection8
+	{size:363.0pt 272.5pt;
+	margin:0cm 0cm 0cm 0cm;}
+div.WordSection8
+	{page:WordSection8;}
+@page WordSection9
+	{size:363.0pt 272.5pt;
+	margin:0cm 0cm 0cm 0cm;}
+div.WordSection9
+	{page:WordSection9;}
+@page WordSection10
+	{size:363.0pt 272.5pt;
+	margin:0cm 0cm 0cm 0cm;}
+div.WordSection10
+	{page:WordSection10;}
+@page WordSection11
+	{size:363.0pt 272.5pt;
+	margin:0cm 0cm 0cm 0cm;}
+div.WordSection11
+	{page:WordSection11;}
+@page WordSection12
+	{size:363.0pt 272.5pt;
+	margin:0cm 0cm 0cm 0cm;}
+div.WordSection12
+	{page:WordSection12;}
+@page WordSection13
+	{size:363.0pt 272.5pt;
+	margin:0cm 0cm 0cm 0cm;}
+div.WordSection13
+	{page:WordSection13;}
+@page WordSection14
+	{size:363.0pt 272.5pt;
+	margin:0cm 0cm 0cm 0cm;}
+div.WordSection14
+	{page:WordSection14;}
+@page WordSection15
+	{size:363.0pt 272.5pt;
+	margin:23.0pt 0cm 14.0pt 0cm;}
+div.WordSection15
+	{page:WordSection15;}
+@page WordSection16
+	{size:363.0pt 272.5pt;
+	margin:0cm 0cm 0cm 0cm;}
+div.WordSection16
+	{page:WordSection16;}
+-->
+</style>
+
+</head>
+
+<body lang=FR style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoBodyText><span style='position:absolute;z-index:-1660087808;
+margin-left:8px;margin-top:4px;width:604px;height:454px'><img width=483
+height=363 src="presentation_fichiers/image001.gif"></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.2pt'><span lang=RU style='font-size:
+14.0pt'>&nbsp;</span></p>
+
+<h1 style='margin-left:28.3pt'><span lang=RU style='color:#22373A'>Установка<span
+style='letter-spacing:1.5pt'> </span>ОС<span style='letter-spacing:1.5pt'> </span>на<span
+style='letter-spacing:1.55pt'> </span>виртуальную<span style='letter-spacing:
+1.5pt'> </span>машину</span></h1>
+
+<p class=MsoBodyText style='margin-top:.25pt'><br clear=ALL>
+</p>
+
+<p class=MsoBodyText style='margin-top:.5pt'><b><span lang=RU style='font-size:
+13.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:7.15pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:28.3pt;margin-bottom:.0001pt'><span lang=RU style='font-size:
+10.0pt;color:#22373A'>Клодели<span style='letter-spacing:-.65pt'> </span>Бансимба<sup>1</sup></span></p>
+
+<p class=MsoNormal style='margin-top:4.7pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:28.3pt;margin-bottom:.0001pt'><span lang=EN-US style='font-size:
+10.0pt;color:#22373A'>17 февраль</span><span lang=RU style='font-size:10.0pt;
+color:#22373A'>,<span style='letter-spacing:-.05pt'> </span>2023, Москва,
+Россия</span></p>
+
+<p class=MsoNormal style='margin-top:8.15pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:28.3pt;margin-bottom:.0001pt'><span lang=RU style='font-size:
+6.0pt;color:#22373A;position:relative;top:-3.5pt'>1</span><span lang=RU
+style='font-size:8.0pt;color:#22373A'>Российский<span style='letter-spacing:
+.75pt'> </span>Университет<span style='letter-spacing:.75pt'> </span>Дружбы<span
+style='letter-spacing:1.05pt'> </span>Народов</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.1pt'><span lang=RU style='font-size:
+10.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='margin-top:5.85pt;margin-right:8.85pt;
+margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:right'><span
+lang=RU style='font-size:8.0pt;color:#22373A'>1/13</span></p>
+
+</div>
+
+<span lang=RU style='font-size:8.0pt;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection2>
+
+<p class=MsoBodyText><span style='position:absolute;z-index:-1660086784;
+margin-left:8px;margin-top:85px;width:604px;height:454px'><img width=483
+height=363 src="presentation_fichiers/image002.gif"></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<h1><a name="Цели_и_задачи_работы"></a><a name="_bookmark0"></a><span lang=RU><a
+href="#_bookmark0"><span style='color:#22373A;text-decoration:none'>Цели<span
+style='letter-spacing:.95pt'> </span>и<span style='letter-spacing:.95pt'> </span>задачи<span
+style='letter-spacing:1.0pt'> </span>работы</span></a></span></h1>
+
+<p class=MsoBodyText style='margin-top:.35pt'><br clear=ALL>
+</p>
+
+</div>
+
+<span lang=RU style='font-size:6.5pt;font-family:"Cambria",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection3>
+
+<p class=MsoBodyText><span style='position:absolute;z-index:-1660086272;
+margin-left:8px;margin-top:125px;width:604px;height:454px'><img width=483
+height=363 src="presentation_fichiers/image001.gif"></span></p>
+
+<p class=MsoBodyText><b><span lang=RU style='font-size:10.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText><b><span lang=RU style='font-size:10.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText><b><span lang=RU style='font-size:10.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText><b><span lang=RU style='font-size:10.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText><b><span lang=RU style='font-size:10.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText><b><span lang=RU style='font-size:10.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText><b><span lang=RU style='font-size:10.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText style='margin-top:.35pt'><b><span lang=RU
+style='font-size:8.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText style='margin-top:6.05pt;margin-right:28.1pt;margin-bottom:
+0cm;margin-left:28.3pt;margin-bottom:.0001pt;line-height:122%'><span
+style='position:relative;z-index:15731200'><span style='left:0px;position:absolute;
+left:7px;top:-11px;width:608px;height:55px'><img width=486 height=44
+src="presentation_fichiers/image003.gif"></span></span><span lang=RU><span
+style='color:#22373A'>Целью<span style='letter-spacing:1.25pt'> </span>данной<span
+style='letter-spacing:1.65pt'> </span>работы<span style='letter-spacing:1.65pt'>
+</span>является<span style='letter-spacing:1.65pt'> </span>приобретение<span
+style='letter-spacing:1.65pt'> </span>практических<span style='letter-spacing:
+-2.75pt'> </span></span><span style='color:#22373A'>навыков<span
+style='letter-spacing:-.6pt'> </span>установки<span style='letter-spacing:-.55pt'>
+</span>операционной<span style='letter-spacing:-.6pt'> </span>системы<span
+style='letter-spacing:-.55pt'> </span>на<span style='letter-spacing:-.6pt'> </span>виртуальную<span
+style='letter-spacing:-2.85pt'> </span>машину, настройки минимально необходимых
+для<span style='letter-spacing:.05pt'> </span>дальнейшей<span style='letter-spacing:
+-.4pt'> </span>работы<span style='letter-spacing:-.35pt'> </span>сервисов</span></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.3pt'><span lang=RU style='font-size:
+14.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='margin-top:5.85pt;margin-right:8.85pt;
+margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:right'><span
+lang=RU style='font-size:8.0pt;color:#22373A'>2/13</span></p>
+
+</div>
+
+<span lang=RU style='font-size:8.0pt;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection4>
+
+<p class=MsoBodyText><span style='position:absolute;z-index:-1660084736;
+margin-left:8px;margin-top:211px;width:604px;height:454px'><img width=483
+height=363 src="presentation_fichiers/image004.gif"></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.2pt'><span lang=RU style='font-size:
+13.5pt'>&nbsp;</span></p>
+
+<h1 style='margin-top:6.6pt;margin-right:49.6pt;margin-bottom:0cm;margin-left:
+61.4pt;margin-bottom:.0001pt;line-height:125%'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=110 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=320 height=1 src="presentation_fichiers/image005.gif"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<span lang=RU><a name="Процесс_выполнения_лабораторной_работы"></a><a
+name="_bookmark1"></a><a href="#_bookmark1"><span style='color:#22373A;
+text-decoration:none'>Процесс<span style='letter-spacing:.05pt'> </span>выполнения</span></a><span
+style='color:#22373A;letter-spacing:.05pt'> </span><a href="#_bookmark1"><span
+style='color:#22373A;text-decoration:none'>лабораторной<span style='letter-spacing:
+.95pt'> </span>работы</span></a></span></h1>
+
+</div>
+
+<span lang=RU style='font-size:11.0pt;line-height:125%;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection5>
+
+<p class=MsoBodyText>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=7 height=253></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=486 height=43 src="presentation_fichiers/image006.gif"></td>
+ </tr>
+</table>
+
+<span style='position:absolute;z-index:-1660084224;margin-left:8px;margin-top:
+253px;width:604px;height:454px'><img width=483 height=363
+src="presentation_fichiers/image002.gif"></span></p>
+
+<p class=MsoBodyText><b><span lang=RU style='font-size:10.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText style='margin-top:.05pt'><b><span lang=RU
+style='font-size:11.5pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<br clear=ALL>
+
+<p class=MsoBodyText style='margin-left:81.45pt'><span lang=RU><img border=0
+width=304 height=215 id="Image 2" src="presentation_fichiers/image007.gif"></span></p>
+
+<p class=MsoBodyText style='margin-top:.4pt'><b><span lang=RU style='font-size:
+6.5pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='margin-top:5.85pt;margin-right:60.7pt;
+margin-bottom:0cm;margin-left:60.7pt;margin-bottom:.0001pt;text-align:center'><b><span
+lang=RU style='font-size:10.0pt;font-family:"Cambria",serif;color:#22373A'>Рис.<span
+style='letter-spacing:.3pt'> </span>1:<span style='letter-spacing:.3pt'> </span></span></b><span
+lang=RU style='font-size:10.0pt;color:#22373A'>Создание<span style='letter-spacing:
+-.25pt'> </span>новой<span style='letter-spacing:-.3pt'> </span>виртуальной<span
+style='letter-spacing:-.25pt'> </span>машины</span></p>
+
+<p class=MsoBodyText style='margin-top:.05pt'><span lang=RU style='font-size:
+13.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='margin-top:5.85pt;margin-right:8.85pt;
+margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:right'><span
+lang=RU style='font-size:8.0pt;color:#22373A'>3/13</span></p>
+
+</div>
+
+<span lang=RU style='font-size:8.0pt;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection6>
+
+<p class=MsoBodyText>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=7 height=340></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=486 height=43 src="presentation_fichiers/image008.gif"></td>
+ </tr>
+</table>
+
+<span style='position:absolute;z-index:-1660083200;margin-left:8px;margin-top:
+340px;width:604px;height:453px'><img width=483 height=362
+src="presentation_fichiers/image009.gif"></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.2pt'><span lang=RU style='font-size:
+12.0pt'>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<p class=MsoBodyText style='margin-left:80.3pt'><span lang=RU style='font-size:
+10.0pt'><img border=0 width=268 height=223 id=image2.png
+src="presentation_fichiers/image010.jpg"></span></p>
+
+<p class=MsoBodyText style='margin-top:.3pt'><span lang=RU style='font-size:
+7.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:5.85pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:92.75pt;margin-bottom:.0001pt'><b><span lang=RU
+style='font-size:10.0pt;font-family:"Cambria",serif;color:#22373A'>Рис.<span
+style='letter-spacing:1.35pt'> </span>2:<span style='letter-spacing:1.35pt'> </span></span></b><span
+lang=RU style='font-size:10.0pt;color:#22373A'>Конфигурация<span
+style='letter-spacing:.7pt'> </span>жёсткого<span style='letter-spacing:.45pt'>
+</span>диска</span></p>
+
+<p class=MsoBodyText style='margin-top:.05pt'><span lang=RU style='font-size:
+13.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='margin-top:5.8pt;margin-right:8.85pt;
+margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:right'><span
+lang=RU style='font-size:8.0pt;color:#22373A'>4/13</span></p>
+
+</div>
+
+<span lang=RU style='font-size:8.0pt;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection7>
+
+<p class=MsoBodyText>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=7 height=428></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=486 height=43 src="presentation_fichiers/image011.gif"></td>
+ </tr>
+</table>
+
+<span style='position:absolute;z-index:-1660082176;margin-left:8px;margin-top:
+428px;width:604px;height:453px'><img width=483 height=362
+src="presentation_fichiers/image009.gif"></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.2pt'><span lang=RU style='font-size:
+12.0pt'>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<p class=MsoBodyText style='margin-left:79.25pt'><span lang=RU
+style='font-size:10.0pt'><img border=0 width=270 height=222 id=image3.png
+src="presentation_fichiers/image012.jpg"></span></p>
+
+<p class=MsoBodyText style='margin-top:.05pt'><span lang=RU style='font-size:
+7.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:5.85pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:92.75pt;margin-bottom:.0001pt'><b><span lang=RU
+style='font-size:10.0pt;font-family:"Cambria",serif;color:#22373A'>Рис.<span
+style='letter-spacing:1.35pt'> </span>3:<span style='letter-spacing:1.35pt'> </span></span></b><span
+lang=RU style='font-size:10.0pt;color:#22373A'>Конфигурация<span
+style='letter-spacing:.7pt'> </span>жёсткого<span style='letter-spacing:.45pt'>
+</span>диска</span></p>
+
+<p class=MsoBodyText style='margin-top:.05pt'><span lang=RU style='font-size:
+13.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='margin-top:5.85pt;margin-right:8.85pt;
+margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:right'><span
+lang=RU style='font-size:8.0pt;color:#22373A'>5/13</span></p>
+
+</div>
+
+<span lang=RU style='font-size:8.0pt;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection8>
+
+<p class=MsoBodyText>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=7 height=516></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=486 height=44 src="presentation_fichiers/image013.gif"></td>
+ </tr>
+</table>
+
+<span style='position:absolute;z-index:-1660081152;margin-left:8px;margin-top:
+517px;width:604px;height:453px'><img width=483 height=362
+src="presentation_fichiers/image009.gif"></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.2pt'><span lang=RU style='font-size:
+12.0pt'>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<p class=MsoBodyText style='margin-left:80.75pt'><span lang=RU
+style='font-size:10.0pt'><img border=0 width=270 height=226 id=image4.png
+src="presentation_fichiers/image014.jpg"></span></p>
+
+<p class=MsoBodyText style='margin-top:.15pt'><span lang=RU style='font-size:
+5.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:5.85pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:92.75pt;margin-bottom:.0001pt'><b><span lang=RU
+style='font-size:10.0pt;font-family:"Cambria",serif;color:#22373A'>Рис.<span
+style='letter-spacing:1.35pt'> </span>4:<span style='letter-spacing:1.35pt'> </span></span></b><span
+lang=RU style='font-size:10.0pt;color:#22373A'>Конфигурация<span
+style='letter-spacing:.7pt'> </span>жёсткого<span style='letter-spacing:.45pt'>
+</span>диска</span></p>
+
+<p class=MsoBodyText style='margin-top:.05pt'><span lang=RU style='font-size:
+13.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='margin-top:5.85pt;margin-right:8.85pt;
+margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:right'><span
+lang=RU style='font-size:8.0pt;color:#22373A'>6/13</span></p>
+
+</div>
+
+<span lang=RU style='font-size:8.0pt;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection9>
+
+<p class=MsoBodyText>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=7 height=604></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=486 height=44 src="presentation_fichiers/image015.gif"></td>
+ </tr>
+</table>
+
+<span style='position:absolute;z-index:-1660080128;margin-left:8px;margin-top:
+605px;width:604px;height:453px'><img width=483 height=362
+src="presentation_fichiers/image009.gif"></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.2pt'><span lang=RU style='font-size:
+12.0pt'>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<p class=MsoBodyText style='margin-left:80.25pt'><span lang=RU><img border=0
+width=282 height=152 id="Image 4" src="presentation_fichiers/image016.gif"></span></p>
+
+<p class=MsoBodyText style='margin-top:.1pt'><span lang=RU style='font-size:
+6.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:5.85pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:92.75pt;margin-bottom:.0001pt'><b><span lang=RU
+style='font-size:10.0pt;font-family:"Cambria",serif;color:#22373A'>Рис.<span
+style='letter-spacing:1.35pt'> </span>5:<span style='letter-spacing:1.35pt'> </span></span></b><span
+lang=RU style='font-size:10.0pt;color:#22373A'>Конфигурация<span
+style='letter-spacing:.7pt'> </span>жёсткого<span style='letter-spacing:.45pt'>
+</span>диска</span></p>
+
+<p class=MsoBodyText style='margin-top:.05pt'><span lang=RU style='font-size:
+13.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='margin-top:5.85pt;margin-right:8.85pt;
+margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:right'><span
+lang=RU style='font-size:8.0pt;color:#22373A'>7/13</span></p>
+
+</div>
+
+<span lang=RU style='font-size:8.0pt;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection10>
+
+<p class=MsoBodyText>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=7 height=675></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=486 height=65 src="presentation_fichiers/image017.gif"></td>
+ </tr>
+</table>
+
+<span style='position:absolute;z-index:-1660079104;margin-left:8px;margin-top:
+675px;width:604px;height:453px'><img width=483 height=362
+src="presentation_fichiers/image009.gif"></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.25pt'><span lang=RU style='font-size:
+7.5pt'>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<p class=MsoBodyText style='margin-left:74.25pt'><span lang=RU><img border=0
+width=257 height=187 id="Image 6" src="presentation_fichiers/image018.gif"></span></p>
+
+<p class=MsoBodyText style='margin-top:.15pt'><span lang=RU style='font-size:
+5.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-top:5.85pt;margin-right:60.7pt;
+margin-bottom:0cm;margin-left:60.7pt;margin-bottom:.0001pt;text-align:center'><b><span
+lang=RU style='font-size:10.0pt;font-family:"Cambria",serif;color:#22373A;
+letter-spacing:-.05pt'>Рис.</span></b><b><span lang=RU style='font-size:10.0pt;
+font-family:"Cambria",serif;color:#22373A;letter-spacing:-.15pt'> </span></b><b><span
+lang=RU style='font-size:10.0pt;font-family:"Cambria",serif;color:#22373A'>6:<span
+style='letter-spacing:-.1pt'> </span></span></b><span lang=RU style='font-size:
+10.0pt;color:#22373A'>Конфигурация<span style='letter-spacing:-.65pt'> </span>системы</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.25pt'><span lang=RU style='font-size:
+10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='margin-right:8.85pt;text-align:right'><span
+lang=RU style='font-size:8.0pt;color:#22373A'>8/13</span></p>
+
+</div>
+
+<span lang=RU style='font-size:8.0pt;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection11>
+
+<p class=MsoBodyText>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=7 height=760></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=486 height=43 src="presentation_fichiers/image019.gif"></td>
+ </tr>
+</table>
+
+<span style='position:absolute;z-index:-1660078080;margin-left:8px;margin-top:
+760px;width:604px;height:454px'><img width=483 height=363
+src="presentation_fichiers/image020.gif"></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.05pt'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=112 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=297 height=169 src="presentation_fichiers/image021.gif"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-left:83.4pt'><span lang=RU style='font-size:
+10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.3pt'><span lang=RU style='font-size:
+7.5pt'>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<p class=MsoNormal align=center style='margin-top:5.9pt;margin-right:60.7pt;
+margin-bottom:0cm;margin-left:60.7pt;margin-bottom:.0001pt;text-align:center'><b><span
+lang=RU style='font-size:10.0pt;font-family:"Cambria",serif;color:#22373A;
+letter-spacing:-.1pt'>Рис. </span></b><b><span lang=RU style='font-size:10.0pt;
+font-family:"Cambria",serif;color:#22373A;letter-spacing:-.05pt'>7:</span></b><b><span
+lang=RU style='font-size:10.0pt;font-family:"Cambria",serif;color:#22373A;
+letter-spacing:-.2pt'> </span></b><span lang=RU style='font-size:10.0pt;
+color:#22373A;letter-spacing:-.05pt'>Установка</span><span lang=RU
+style='font-size:10.0pt;color:#22373A;letter-spacing:-.65pt'> </span><span
+lang=RU style='font-size:10.0pt;color:#22373A;letter-spacing:-.05pt'>языка</span></p>
+
+<p class=MsoBodyText style='margin-top:.15pt'><span lang=RU style='font-size:
+12.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='margin-top:5.85pt;margin-right:8.85pt;
+margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:right'><span
+lang=RU style='font-size:8.0pt;color:#22373A'>9/13</span></p>
+
+</div>
+
+<span lang=RU style='font-size:8.0pt;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection12>
+
+<p class=MsoBodyText>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=7 height=839></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=486 height=44 src="presentation_fichiers/image022.gif"></td>
+ </tr>
+</table>
+
+<span style='position:absolute;z-index:-1660077056;margin-left:8px;margin-top:
+840px;width:604px;height:453px'><img width=483 height=362
+src="presentation_fichiers/image009.gif"></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.2pt'><span lang=RU style='font-size:
+12.0pt'>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<p class=MsoBodyText style='margin-left:82.65pt'><span lang=RU
+style='font-size:10.0pt'><img border=0 width=260 height=222 id=image8.jpeg
+src="presentation_fichiers/image023.jpg"></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:8.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-top:5.85pt;margin-right:60.7pt;
+margin-bottom:0cm;margin-left:60.7pt;margin-bottom:.0001pt;text-align:center'><b><span
+lang=RU style='font-size:10.0pt;font-family:"Cambria",serif;color:#22373A'>Рис.<span
+style='letter-spacing:-.05pt'> </span>8: </span></b><span lang=RU
+style='font-size:10.0pt;color:#22373A'>Параметры<span style='letter-spacing:
+-.6pt'> </span>установки</span></p>
+
+<p class=MsoBodyText style='margin-top:.05pt'><span lang=RU style='font-size:
+13.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='margin-top:5.8pt;margin-right:8.85pt;
+margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:right'><span
+lang=RU style='font-size:8.0pt;color:#22373A'>10/13</span></p>
+
+</div>
+
+<span lang=RU style='font-size:8.0pt;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection13>
+
+<p class=MsoBodyText>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=7 height=927></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=486 height=43 src="presentation_fichiers/image024.gif"></td>
+ </tr>
+</table>
+
+<span style='position:absolute;z-index:-1660076032;margin-left:8px;margin-top:
+927px;width:604px;height:454px'><img width=483 height=363
+src="presentation_fichiers/image002.gif"></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.55pt'><span lang=RU style='font-size:
+12.0pt'>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<p class=MsoBodyText style='margin-left:82.45pt'><span lang=RU
+style='font-size:10.0pt'><img border=0 width=267 height=227 id=image9.jpeg
+src="presentation_fichiers/image025.jpg"></span></p>
+
+<p class=MsoBodyText style='margin-top:.4pt'><span lang=RU style='font-size:
+4.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-top:5.85pt;margin-right:60.7pt;
+margin-bottom:0cm;margin-left:60.7pt;margin-bottom:.0001pt;text-align:center'><b><span
+lang=RU style='font-size:10.0pt;font-family:"Cambria",serif;color:#22373A'>Рис.<span
+style='letter-spacing:.1pt'> </span>9:<span style='letter-spacing:.1pt'> </span></span></b><span
+lang=RU style='font-size:10.0pt;color:#22373A'>Создание<span style='letter-spacing:
+-.5pt'> </span>пользователя</span></p>
+
+<p class=MsoBodyText style='margin-top:.3pt'><span lang=RU style='font-size:
+13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='margin-top:5.8pt;margin-right:8.85pt;
+margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:right'><span
+lang=RU style='font-size:8.0pt;color:#22373A'>11/13</span></p>
+
+</div>
+
+<span lang=RU style='font-size:8.0pt;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection14>
+
+<p class=MsoBodyText>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=7 height=1016></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=486 height=43 src="presentation_fichiers/image026.gif"></td>
+ </tr>
+</table>
+
+<span style='position:absolute;z-index:-1660075008;margin-left:8px;margin-top:
+1016px;width:604px;height:454px'><img width=483 height=363
+src="presentation_fichiers/image002.gif"></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.35pt;margin-right:0cm;margin-bottom:
+.05pt;margin-left:0cm'><span lang=RU style='font-size:6.5pt'>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<p class=MsoBodyText style='margin-left:74.25pt'><span lang=RU
+style='font-size:10.0pt'><img border=0 width=286 height=214 id=image10.png
+src="presentation_fichiers/image027.jpg"></span></p>
+
+<p class=MsoBodyText style='margin-top:.25pt'><span lang=RU style='font-size:
+5.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-top:5.85pt;margin-right:60.7pt;
+margin-bottom:0cm;margin-left:60.7pt;margin-bottom:.0001pt;text-align:center'><b><span
+lang=RU style='font-size:10.0pt;font-family:"Cambria",serif;color:#22373A;
+letter-spacing:-.05pt'>Рис.</span></b><b><span lang=RU style='font-size:10.0pt;
+font-family:"Cambria",serif;color:#22373A;letter-spacing:-.1pt'> </span></b><b><span
+lang=RU style='font-size:10.0pt;font-family:"Cambria",serif;color:#22373A;
+letter-spacing:-.05pt'>10: </span></b><span lang=RU style='font-size:10.0pt;
+color:#22373A;letter-spacing:-.05pt'>Рабочая</span><span lang=RU
+style='font-size:10.0pt;color:#22373A;letter-spacing:-.65pt'> </span><span
+lang=RU style='font-size:10.0pt;color:#22373A'>система</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:11.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='margin-right:8.85pt;text-align:right'><span
+lang=RU style='font-size:8.0pt;color:#22373A'>12/13</span></p>
+
+</div>
+
+<span lang=RU style='font-size:8.0pt;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection15>
+
+<p class=MsoBodyText><span style='position:absolute;z-index:-1660073472;
+margin-left:8px;margin-top:1105px;width:604px;height:453px'><img width=483
+height=362 src="presentation_fichiers/image009.gif"></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:13.0pt'>&nbsp;</span></p>
+
+<h1 align=center style='margin-top:6.65pt;margin-right:67.7pt;margin-bottom:
+0cm;margin-left:60.7pt;margin-bottom:.0001pt;text-align:center'><a
+name="Выводы_по_проделанной_работе"></a><a name="_bookmark2"></a><span lang=RU><a
+href="#_bookmark2"><span style='color:#22373A;text-decoration:none'>Выводы<span
+style='letter-spacing:1.0pt'> </span>по<span style='letter-spacing:1.0pt'> </span>проделанной<span
+style='letter-spacing:1.05pt'> </span>работе</span></a></span></h1>
+
+<p class=MsoBodyText style='margin-top:.35pt'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=110 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=320 height=1 src="presentation_fichiers/image028.gif"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+</p>
+
+</div>
+
+<span lang=RU style='font-size:6.5pt;font-family:"Cambria",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection16>
+
+<p class=MsoBodyText><span style='position:absolute;z-index:-1660072960;
+margin-left:8px;margin-top:1145px;width:604px;height:453px'><img width=483
+height=362 src="presentation_fichiers/image009.gif"></span></p>
+
+<p class=MsoBodyText><b><span lang=RU style='font-size:10.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText><b><span lang=RU style='font-size:10.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText><b><span lang=RU style='font-size:10.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText><b><span lang=RU style='font-size:10.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText><b><span lang=RU style='font-size:10.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText><b><span lang=RU style='font-size:10.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText><b><span lang=RU style='font-size:10.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText style='margin-top:.35pt'><b><span lang=RU
+style='font-size:8.0pt;font-family:"Cambria",serif'>&nbsp;</span></b></p>
+
+<p class=MsoBodyText style='margin-top:6.05pt;margin-right:28.1pt;margin-bottom:
+0cm;margin-left:28.3pt;margin-bottom:.0001pt;line-height:122%'><span
+style='position:absolute;z-index:15744512;left:0px;margin-left:7px;margin-top:
+1009px;width:608px;height:54px'><img width=486 height=43
+src="presentation_fichiers/image029.gif"></span><span lang=RU><span
+style='color:#22373A'>Мы приобрели практические навыки установки<span
+style='letter-spacing:.05pt'> </span><span style='letter-spacing:-.1pt'>операционной</span><span
+style='letter-spacing:-.35pt'> </span><span style='letter-spacing:-.05pt'>системы</span><span
+style='letter-spacing:-.3pt'> </span><span style='letter-spacing:-.05pt'>на</span><span
+style='letter-spacing:-.35pt'> </span><span style='letter-spacing:-.05pt'>виртуальную</span><span
+style='letter-spacing:-.3pt'> </span><span style='letter-spacing:-.05pt'>машину,</span><span
+style='letter-spacing:-.75pt'> </span><span style='letter-spacing:-.05pt'>настройки</span><span
+style='letter-spacing:-2.85pt'> </span>минимально необходимых для дальнейшей
+работы<span style='letter-spacing:.05pt'> </span>сервисов.</span></span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:14.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:14.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:14.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText><span lang=RU style='font-size:14.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyText style='margin-top:.35pt'><span lang=RU style='font-size:
+13.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=right style='margin-top:.05pt;margin-right:8.85pt;
+margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:right'><span
+lang=RU style='font-size:8.0pt;color:#22373A'>13/13</span></p>
+
+</div>
+
+</body>
+
+</html>
